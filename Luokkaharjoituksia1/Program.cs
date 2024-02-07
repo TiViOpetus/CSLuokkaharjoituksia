@@ -6,6 +6,24 @@ using System.Threading.Tasks;
 
 namespace Luokkaharjoituksia1
 {
+    // A superclass for various pet animals
+    class Pet
+    {
+        public virtual void Eats()
+        { 
+            Console.WriteLine("Eats some food")
+        }
+    }
+
+    // A subcalss of pet
+    class Hare : Pet
+    {
+        public override void Eats()
+        {
+            Console.WriteLine("Eats carrots and grass");
+        }
+    }
+
     class Hooman
     {
         // Define properties of Hooman ie. fields
@@ -59,7 +77,10 @@ namespace Luokkaharjoituksia1
     class DogOwner : Hooman
 
     {
-
+        public new void SayOpinion()
+        {
+            Console.WriteLine("Koira on uskollinen ja luotettava kumppani, ihmisen paras ystävä");
+        }
     }
 
     internal class Program
@@ -84,10 +105,12 @@ namespace Luokkaharjoituksia1
             // Use catowners SayOpinion method
             catOwner.SayOpinion();
 
+            // Create a new dog owner and call SayOpinion method
+            DogOwner dogOwner = new DogOwner();
+            dogOwner.SayOpinion();
+
             // Keep the window opent until enter pressed
             Console.ReadLine();
-
-
         }
     }
 }
