@@ -9,9 +9,9 @@ namespace Luokkaharjoituksia1
     class Hooman
     {
         // Define properties of Hooman ie. fields
-        string name = "Essi Esimerkki";
-        int age = 30;
-        string gender = "Emäntä";
+        public string name = "Essi Esimerkki";
+        public int age = 30;
+        public string gender = "Emäntä";
 
         // Default constructor w/o arguments
         // No need to define, will be crated automatically
@@ -48,6 +48,20 @@ namespace Luokkaharjoituksia1
             Console.WriteLine("Voi, lemmikit ne on elämän suola");
         }
     }
+    
+    class CatOwner : Hooman
+    {
+        public new void SayOpinion()
+        { Console.WriteLine("Kissat ovat itsenäisiä ja pitävät hiiret loitolla");
+        }
+    }
+
+    class DogOwner : Hooman
+
+    {
+
+    }
+
     internal class Program
     {
         static void Main(string[] args)
@@ -58,8 +72,19 @@ namespace Luokkaharjoituksia1
             // Call the SayOpinion method
             owner.SayOpinion();
 
-            // Keep the window opent until enter pressed
+            // Save owners name property to a variable
+            string who = owner.name;
 
+            // Test it by echoing it to a console
+            Console.WriteLine("totesi " + who);
+
+            // Create a new catowner object
+            CatOwner catOwner = new CatOwner();
+
+            // Use catowners SayOpinion method
+            catOwner.SayOpinion();
+
+            // Keep the window opent until enter pressed
             Console.ReadLine();
 
 
