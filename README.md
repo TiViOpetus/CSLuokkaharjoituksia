@@ -38,8 +38,18 @@ class CatOwner : Hooman
 }
 ```
 ## Tehtävä1
-Rakenna koiranomistajalle perivä luokka ja sille ylikirjoittava `SayOpinion`-metodi
+Rakenna koiranomistajalle perivä luokka ja sille ylikirjoittava `SayOpinion`-metodi:
+```csharp
+class DogOwner : Hooman
 
+{
+    public new void SayOpinion()
+    {
+        Console.WriteLine("Koira on uskollinen ja luotettava kumppani, ihmisen paras ystävä");
+    }
+}
+```
+Luodaan aliluokasta uusi oli ja testataan ominaisuutta
 ```csharp
 // Create a new dog owner and call SayOpinion method
 DogOwner dogOwner = new DogOwner();
