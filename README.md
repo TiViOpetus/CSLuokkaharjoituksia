@@ -19,6 +19,12 @@ class Hooman
     {
 
     }
+
+    // Method to say something
+public void SayOpininon()
+{
+  Console.WriteLine("Lemmikit ovat elämän suola");
+}
 }
 
 // Sub/Derived/Child class inherits Hooman class
