@@ -9,15 +9,17 @@ namespace Luokkaharjoituksia1
     // A superclass for various pet animals
     class Pet
     {
+        // Eats method is explicitly defind to be over written in the subclass with keyword virtual
         public virtual void Eats()
-        { 
-            Console.WriteLine("Eats some food")
+        {
+            Console.WriteLine("Eats some food");
         }
     }
 
     // A subcalss of pet
     class Hare : Pet
     {
+        // Override allows over witining base class methos
         public override void Eats()
         {
             Console.WriteLine("Eats carrots and grass");
